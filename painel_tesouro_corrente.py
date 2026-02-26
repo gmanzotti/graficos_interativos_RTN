@@ -15,7 +15,7 @@ st.set_page_config(page_title="Painel Tesouro Nacional", layout="wide")
 # UMA VEZ SÓ. Se você mudar os filtros, ele não lê o Excel de novo, ficando super rápido!
 @st.cache_data
 def carregar_dados():
-    caminho_do_arquivo = r'V:\Assessoria FIESP\2026\02. Fevereiro\Painel RTN Online Python\rtn_corrente.xlsx'
+    caminho_do_arquivo = 'rtn_corrente.xlsx'
     
     # 1. Leitura
     df_wide = pd.read_excel(caminho_do_arquivo)
@@ -109,4 +109,5 @@ else:
     fig.update_traces(hovertemplate='<b>Data:</b> %{x|%m/%Y}<br><b>Valor:</b> R$ %{y:,.1f} Milhões')
     
     # Exibe o gráfico no site!
+
     st.plotly_chart(fig, use_container_width=True)
