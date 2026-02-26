@@ -46,7 +46,7 @@ df_final = carregar_dados()
 # ==============================================================================
 # 3. Construção da Interface Visual (O site em si)
 # ==============================================================================
-st.title("📊 Painel de Execução Orçamentária")
+st.title("📊 Painel de Execução Orçamentária - Valores Correntes")
 st.markdown("Selecione a discriminação e o período desejado abaixo:")
 
 # --- FILTRO 1: Categoria ---
@@ -111,3 +111,4 @@ else:
     # Exibe o gráfico no site!
 
     st.plotly_chart(fig, use_container_width=True)
+
